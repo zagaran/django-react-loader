@@ -1,0 +1,36 @@
+{
+  "name": "django-react-loader",
+  "version": "1.0.0",
+  "description": "React component loader module for django and webpack ",
+  "private": true,
+  "main": "dist/django-react-loader.js",
+  "scripts": {
+    "build": "NODE_ENV=production babel src -d dist --copy-files",
+    "clean": "del-cli dist",
+    "start": "nwb serve-react-app",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
+  },
+  "dependencies": {
+    "nwb": "^0.23.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "webpack": "^4.30.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.0-beta.6",
+    "react-hot-loader": "^4.6.3",
+    "webpack-bundle-tracker": "^0.4.2-beta",
+    "webpack-cli": "^3.2.1"
+  },
+  "author": "Zagaran, Inc.",
+  "license": "MIT",
+  "repository": "zagaran/django-react-loader",
+  "homepage": "https://github.com/zagaran/django-react-loader",
+  "bugs": "https://github.com/zagaran/django-react-loader/issues"
+}
