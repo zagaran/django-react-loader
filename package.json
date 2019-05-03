@@ -15,8 +15,7 @@
   "dependencies": {
     "nwb": "^0.23.0",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "webpack": "^4.30.0"
+    "react-dom": "^16.5.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -25,8 +24,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.0-beta.6",
     "react-hot-loader": "^4.6.3",
-    "webpack-bundle-tracker": "^0.4.2-beta",
-    "webpack-cli": "^3.2.1"
+    "webpack": "^4.30.0"
   },
   "author": "Zagaran, Inc.",
   "license": "MIT",
