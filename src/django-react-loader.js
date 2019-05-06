@@ -1,18 +1,21 @@
 function createAppendix(name) {
   return (
-    "import { render } from 'react-dom'                                   \
-    window.reactComponents." + name + " = (function() {                   \
-    let _args = {}                                                        \
-                                                                          \
-    return {                                                              \
-      init: function (Args) {                                             \
-        _args = Args                                                      \
-      },                                                                  \
-      render: function () {                                               \
-        const  { id, ...props } = JSON.parse(_args)                       \
-        render(<" + name + " {...props}/>, document.getElementById(id))   \
-      }                                                                   \
-    }                                                                     \
+    "import { render } from 'react-dom'                                   \n\
+    if (window.reactComponents === undefined) {                           \n\
+      window.reactComponents = {}                                         \n\
+    }                                                                     \n\
+    window.reactComponents." + name + " = (function() {                   \n\
+    let _args = {}                                                        \n\
+                                                                          \n\
+    return {                                                              \n\
+      init: function (Args) {                                             \n\
+        _args = Args                                                      \n\
+      },                                                                  \n\
+      render: function () {                                               \n\
+        const  { id, ...props } = JSON.parse(_args)                       \n\
+        render(<" + name + " {...props}/>, document.getElementById(id))   \n\
+      }                                                                   \n\
+    }                                                                     \n\
   }())"
   )
 }
