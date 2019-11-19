@@ -9,12 +9,15 @@
     "start": "nwb serve-react-app",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "test:watch": "nwb test-react --server",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "nwb": "^0.23.0",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "snyk": "^1.248.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -28,5 +31,6 @@
   "license": "MIT",
   "repository": "zagaran/django-react-loader",
   "homepage": "https://github.com/zagaran/django-react-loader",
-  "bugs": "https://github.com/zagaran/django-react-loader/issues"
+  "bugs": "https://github.com/zagaran/django-react-loader/issues",
+  "snyk": true
 }
