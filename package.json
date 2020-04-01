@@ -14,7 +14,7 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "nwb": "^0.23.0",
+    "nwb": "^0.24.5",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "snyk": "^1.248.0"
