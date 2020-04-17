@@ -1,6 +1,7 @@
 function createAppendix(name) {
   return (
-    "import { render } from 'react-dom'                                   \n\
+    "\n\
+    import { render } from 'react-dom'                                    \n\
     if (window.reactComponents === undefined) {                           \n\
       window.reactComponents = {}                                         \n\
     }                                                                     \n\
