@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.0-beta.6",
-    "webpack": "^4.30.0"
+    "webpack": "^5.25.1"
   },
   "author": "Zagaran, Inc.",
   "license": "MIT",
