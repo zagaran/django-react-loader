@@ -1,3 +1,5 @@
+const path = require('path')
+
 function createAppendix(name) {
   return (
     "\n\
@@ -21,13 +23,20 @@ function createAppendix(name) {
   )
 }
 
-export default function(source) {
-  let name
-  try {
-    name = this._module.issuer.name
-  } catch {
-    name = 'Component'
+module.exports = function(source) {
+  // If the module being loaded matches a react component entrypoint, then modify the bundle to 'self-register'
+
+  const issuing_module_path = path.relative(this.rootContext, this.resourcePath)
+  const entry_paths = Object.values(this.query.entries).map((x) => path.join(x))
+
+  if (entry_paths.includes(issuing_module_path)) {
+
+    // Get the filename (without the extension)
+    const component_name = issuing_module_path.split('/').pop().replace(/\.[^/.]+$/, "")
+    console.log('Loaded Component: ', component_name)
+    return source.concat(createAppendix(component_name));
+  } else {
+    return source
   }
 
-  return source.concat(createAppendix(name));
 }
