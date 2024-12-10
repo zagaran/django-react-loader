@@ -1,21 +1,18 @@
 {
   "name": "django-react-loader",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "description": "React component loader module for django and webpack",
   "main": "dist/django-react-loader.js",
   "scripts": {
     "build": "NODE_ENV=production babel src -d dist --copy-files",
     "clean": "del-cli dist",
-    "start": "nwb serve-react-app",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "react": "^16.5.2",
-    "snyk": "^1.248.0"
+    "react": "^18.0.0",
+    "snyk": "^1.294.0",
+    "webpack-bundle-tracker": "^3.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
