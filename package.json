@@ -2,7 +2,7 @@
   "name": "django-react-loader",
   "version": "1.0.0",
   "description": "React component loader module for django and webpack",
-  "main": "src/django-react-loader.js",
+  "main": "dist/django-react-loader.js",
   "scripts": {
     "build": "NODE_ENV=production babel src -d dist --copy-files",
     "clean": "del-cli dist",
