@@ -3,7 +3,7 @@ const path = require('path')
 function createAppendix(name) {
   return (
     "\n\
-    import { render } from 'react-dom'                                    \n\
+    import { createRoot } from 'react-dom/client';                        \n\
     if (window.reactComponents === undefined) {                           \n\
       window.reactComponents = {}                                         \n\
     }                                                                     \n\
@@ -16,7 +16,8 @@ function createAppendix(name) {
       },                                                                  \n\
       render: function () {                                               \n\
         const  { id, ...props } = JSON.parse(_args)                       \n\
-        render(<" + name + " {...props}/>, document.getElementById(id))   \n\
+        const root = createRoot(document.getElementById(id));             \n\
+        root.render(<" + name + " {...props}/>)                           \n\
       }                                                                   \n\
     }                                                                     \n\
   }())"
