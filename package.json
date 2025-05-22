@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "react": "^18.0.0",
-    "snyk": "^1.294.0",
     "webpack-bundle-tracker": "^3.1.1"
   },
   "devDependencies": {
@@ -24,6 +23,7 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.0-beta.6",
+    "snyk": "^1.294.0",
     "webpack": "^4.30.0"
   },
   "author": "Zagaran, Inc.",
