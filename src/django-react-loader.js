@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 
 function createAppendix(name) {
   return (
@@ -24,9 +24,7 @@ function createAppendix(name) {
   )
 }
 
-module.exports = function(source) {
-  // If the module being loaded matches a react component entrypoint, then modify the bundle to 'self-register'
-
+export default function(source) {
   // If the module being loaded matches a React component entrypoint, then modify the bundle to 'self-register'
   const issuing_module_path = path.relative(this.rootContext, this.resourcePath)
   const entry_paths = Object.values(this.query.entries).map((x) => path.join(x))
