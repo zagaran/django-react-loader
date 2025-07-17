@@ -29,6 +29,5 @@
   "repository": "zagaran/django-react-loader",
   "homepage": "https://github.com/zagaran/django-react-loader",
   "bugs": "https://github.com/zagaran/django-react-loader/issues",
-  "snyk": true,
-  "type": "module"
+  "snyk": true
 }
